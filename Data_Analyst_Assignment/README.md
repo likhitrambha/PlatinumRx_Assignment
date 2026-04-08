@@ -32,7 +32,7 @@ This repository contains solutions for the PlatinumRx Data Analyst Assignment. T
 
 * Used standard SQL syntax compatible with MySQL/PostgreSQL.
 * Created schemas and queries based on assignment requirements.
-* Assumed sample data where not explicitly provided.
+* Added sample data to ensure queries run successfully.
 * Used Excel formulas such as VLOOKUP, INT, and HOUR for analysis.
 * Python scripts are written using basic logic and can be extended for edge cases.
 
@@ -40,8 +40,33 @@ This repository contains solutions for the PlatinumRx Data Analyst Assignment. T
 
 ## Submission Links
 
-* **GitHub Repository:** https://github.com/likhitrambha/PlatinumRx_Assignment.git
-* **Spreadsheet (Google Sheets / Excel):** https://docs.google.com/spreadsheets/d/1TW30yIyguxlB-dW1P4i1i2l_caFp3a6V/edit?usp=sharing&ouid=111370431881050377302&rtpof=true&sd=true
+* **GitHub Repository:** https://github.com/likhitrambha/PlatinumRx_Assignment
+* **Spreadsheet:** https://docs.google.com/spreadsheets/d/1TW30yIyguxlB-dW1P4i1i2l_caFp3a6V
+
+---
+
+## How to Run
+
+### SQL
+
+1. Open MySQL Workbench / PostgreSQL / any SQL tool
+2. Run schema files first
+3. Run query files
+
+### Python
+
+1. Open terminal or IDE
+2. Run:
+
+   ```
+   python 01_Time_Converter.py
+   python 02_Remove_Duplicates.py
+   ```
+
+### Spreadsheet
+
+* Open the provided Excel/Google Sheet link
+* Verify VLOOKUP and time calculations
 
 ---
 
