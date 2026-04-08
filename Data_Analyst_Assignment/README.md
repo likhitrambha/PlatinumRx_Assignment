@@ -41,7 +41,7 @@ This repository contains solutions for the PlatinumRx Data Analyst Assignment. T
 ## Submission Links
 
 * **GitHub Repository:** https://github.com/likhitrambha/PlatinumRx_Assignment.git
-* **Spreadsheet (Google Sheets / Excel):** https://docs.google.com/spreadsheets/d/your-link
+* **Spreadsheet (Google Sheets / Excel):** https://docs.google.com/spreadsheets/d/1TW30yIyguxlB-dW1P4i1i2l_caFp3a6V/edit?usp=sharing&ouid=111370431881050377302&rtpof=true&sd=true
 
 ---
 
