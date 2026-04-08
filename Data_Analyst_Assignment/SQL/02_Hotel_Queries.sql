@@ -1,10 +1,15 @@
 -- Hotel System Queries (Part A)
 
--- Q1: Last booked room
-SELECT room_id, check_out_date
-FROM bookings
-ORDER BY check_out_date DESC
-LIMIT 1;
+-- Q1: Last booked room per user
+SELECT b.user_id, b.room_id
+FROM bookings b
+JOIN (
+    SELECT user_id, MAX(check_out_date) AS last_date
+    FROM bookings
+    GROUP BY user_id
+) t
+ON b.user_id = t.user_id 
+AND b.check_out_date = t.last_date;
 
 -- Q2: Billing in Nov 2021
 SELECT b.booking_id, SUM(bc.quantity * bc.rate) AS total_amount
@@ -42,14 +47,22 @@ SELECT month,
 FROM ranked
 GROUP BY month;
 
--- Q5: 2nd Highest Bill
-WITH bill_totals AS (
-    SELECT b.booking_id, SUM(bc.quantity * bc.rate) AS total_amount
+-- Q5: 2nd highest bill per month
+WITH monthly_bills AS (
+    SELECT 
+        MONTH(b.check_in_date) AS month,
+        b.booking_id,
+        SUM(bc.quantity * bc.rate) AS total_amount
     FROM bookings b
-    JOIN booking_commercials bc ON b.booking_id = bc.booking_id
-    GROUP BY b.booking_id
+    JOIN booking_commercials bc 
+        ON b.booking_id = bc.booking_id
+    GROUP BY month, b.booking_id
+),
+ranked AS (
+    SELECT *,
+           DENSE_RANK() OVER (PARTITION BY month ORDER BY total_amount DESC) AS rnk
+    FROM monthly_bills
 )
-SELECT booking_id, total_amount
-FROM bill_totals
-ORDER BY total_amount DESC
-LIMIT 1 OFFSET 1;
+SELECT month, booking_id, total_amount
+FROM ranked
+WHERE rnk = 2;
