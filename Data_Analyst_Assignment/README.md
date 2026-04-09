@@ -42,7 +42,8 @@ This repository contains solutions for the PlatinumRx Data Analyst Assignment. T
 
 * **GitHub Repository:** https://github.com/likhitrambha/PlatinumRx_Assignment
 * **Spreadsheet:** https://docs.google.com/spreadsheets/d/1TW30yIyguxlB-dW1P4i1i2l_caFp3a6V
-
+## 🎥 Project Demo Video
+Watch here: https://drive.google.com/file/d/1uTq3Cvqla6q0E6AbtHszT7euAVgZ-bQH/view?usp=sharing
 ---
 
 ## How to Run

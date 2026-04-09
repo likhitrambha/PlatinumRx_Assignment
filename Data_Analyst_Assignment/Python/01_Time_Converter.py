@@ -6,4 +6,4 @@ def convert_minutes(total_minutes):
     return f"{hours} hrs {minutes} minutes"
 
 # Example
-print(convert_minutes(130))  # 2 hrs 10 minutes
+print(convert_minutes(110))  # 2 hrs 10 minutes

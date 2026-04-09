@@ -8,4 +8,4 @@ def remove_duplicates(input_string):
     return result
 
 # Example
-print(remove_duplicates("hello"))  # helo
+print(remove_duplicates("happy"))  # hapy
